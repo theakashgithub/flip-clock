@@ -1,0 +1,66 @@
+/* Dark/Light Theme */
+@media (prefers-color-scheme: dark) {
+  body { background: #000; }
+}
+@media (prefers-color-scheme: light) {
+  body { background: #fff; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+/* Clock container */
+.clock-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* AM/PM inline at top-right */
+.ampm {
+  position: absolute;
+  top: -12px;
+  right: -35px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* FlipClock appearance */
+.flip-clock-wrapper {
+  font-size: 2.5rem;
+  background: transparent;
+  margin: 0;
+}
+
+.flip-clock-wrapper ul {
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #222;
+}
+@media (max-width: 480px) {
+  .flip-clock-wrapper {
+    font-size: 1.8rem;
+  }
+  .ampm {
+    font-size: 0.7rem;
+    right: -28px;
+    top: -10px;
+  }
+}
